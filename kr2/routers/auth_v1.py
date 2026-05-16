@@ -33,8 +33,8 @@ async def login(creds: LoginRequest, response: Response):
         key="session_token",
         value=token,
         httponly=True,
-        secure=False,   # для прода поставить True
-        max_age=3600,   # 1 час
+        secure=False,
+        max_age=3600,
     )
     return {"message": "Login successful"}
 

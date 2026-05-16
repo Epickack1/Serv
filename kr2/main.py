@@ -4,12 +4,12 @@ from routers import auth_v1, auth_v2, auth_v3, headers, products, users
 
 app = FastAPI(title="Контрольная работа №2")
 
-app.include_router(users.router)       # Задание 3.1
-app.include_router(products.router)    # Задание 3.2
-app.include_router(auth_v1.router)     # Задание 5.1
-app.include_router(auth_v2.router)     # Задание 5.2
-app.include_router(auth_v3.router)     # Задание 5.3
-app.include_router(headers.router)     # Задания 5.4 / 5.5
+app.include_router(users.router)
+app.include_router(products.router)
+app.include_router(auth_v1.router)
+app.include_router(auth_v2.router)
+app.include_router(auth_v3.router)
+app.include_router(headers.router)
 
 
 @app.get("/", tags=["root"])
